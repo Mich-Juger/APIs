@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APIs</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+    <span id="mensaje_error"></span>
+    <div class="conversor">
+        <p>Pesos CLP: </p><input min="1" id="cantidad_pesos" class="form-control " type="number" required>
+    </div>
+    <div>
+        <p> Moneda a Convertir:</p>
+        <select id="moneda_a_convertir">
+            <option value="dolar">Dolar</option>
+            <option value="euro">Euro</option>
+            <option value="uf">Unidad de Fomento</option>
+        </select>
+    </div>
+
+    <div><input type="button" name="buscar" value="Buscar" id="buscar" class="button"></div>
+    <p id="resultado">Resultado:</p>
+
+    <section>
+        <div>
+            <canvas id="myChart"></canvas>
+        </div>
+    </section>
+
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>
