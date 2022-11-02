@@ -5,32 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APIs</title>
+<!--CSS-->
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
+<!--CSS-->
+
+<!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+<!--Google Fonts-->
 
 </head>
 <body>
     <span id="mensaje_error"></span>
-    <div class="conversor">
-        <p>Pesos CLP: </p><input min="1" id="cantidad_pesos" class="form-control " type="number" required>
-    </div>
-    <div>
-        <p> Moneda a Convertir:</p>
-        <select id="moneda_a_convertir">
-            <option value="dolar">Dolar</option>
-            <option value="euro">Euro</option>
-            <option value="uf">Unidad de Fomento</option>
-        </select>
-    </div>
+    <section id="contenedor_conversor">
+        <div class="conversor">
+            <p style="padding: 5px;"><span id="pesos"> Pesos CLP</span> </p><input min="1" id="cantidad_pesos" class="form-control " type="number" required>
+        </div>
+        <div>
+            <p style="padding: 10px;"> Moneda a Convertir</p>
+            <select id="moneda_a_convertir">
+                <option value="dolar">Dolar</option>
+                <option value="euro">Euro</option>
+                <option value="uf">Unidad de Fomento</option>
+            </select>
+        </div>
 
-    <div><input type="button" name="buscar" value="Buscar" id="buscar" class="button"></div>
-    <p id="resultado">Resultado:</p>
+        <div><input type="button" name="buscar" value="Buscar" id="buscar" class="button"></div>
+        <p id="resultado">Resultado: </p>
+    </section>
 
-    <section>
+    <article>
         <div>
             <canvas id="myChart"></canvas>
         </div>
-    </section>
+    </article>
+
 
     <script src="assets/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

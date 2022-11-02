@@ -19,7 +19,8 @@ document.querySelector('#buscar').addEventListener('click', function() {
   if (validarCampos()) {
     let html = '';
     let monedaSeleccionada = monedaConversion.value;
-    html +=  `Resultado: ${Number(cantidad_pesos.value) / tipoMoneda[monedaSeleccionada].valor}`;
+    let resultado = Number(cantidad_pesos.value) / tipoMoneda[monedaSeleccionada].valor;
+    html +=  `Resultado: $${resultado.toFixed(5)}`;
 
     document.querySelector('#resultado').innerHTML = html;
     renderGrafica();
@@ -56,6 +57,7 @@ async function prepararConfiguracionParaLaGrafica(monedas) {
     const nombresDeLasMonedas = historialMonedas10.map(moneda => new Date(moneda.fecha).toLocaleDateString('es-cl'));
     const titulo = "Historial últimos 10 días";
     const colorDeLinea = "blue";
+    const colorFondo = 'white';
     const valores = historialMonedas10.map((moneda) => moneda.valor);
     
     // Creamos el objeto de configuración usando las variables anteriores
@@ -67,9 +69,10 @@ async function prepararConfiguracionParaLaGrafica(monedas) {
                 {
                     label: titulo,
                     backgroundColor: colorDeLinea,
-                    data: valores
+                    data: valores,
                 }
-            ]
+            ], 
+            backgroundColor: colorFondo
         }
     };
     return config;

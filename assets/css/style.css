@@ -1,0 +1,86 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.871);
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+#contenedor_conversor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    height: 300px;
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+#contenedor_conversor > div {
+    padding: 10px;
+}
+
+#myChart {
+    width: 900px;
+    background-color: white;
+    display: none;
+}
+
+#pesos {
+    font-size: 25px;
+}
+
+#resultado {
+    font-size: 20px;
+}
+
+
+select {
+	display: inline-block;
+	width: 180px;
+	cursor: pointer;
+  	height: 30px;
+	border-radius: 0;
+	background: #f0f0f0;
+	color: rgb(138, 132, 132);
+	border:1px solid rgba(49, 106, 205, 0.903);
+    border-radius: 10px;
+    transition: all 0.25s ease;
+}
+
+select:hover{
+	background: #3acbefa4;
+} 
+
+
+#cantidad_pesos {
+    display: inline-block;
+	width: 180px;
+	cursor: pointer;
+  	height: 25px;
+	border-radius: 0;
+	background: #f0f0f0;
+	color: rgb(138, 132, 132);
+	border:1px solid rgba(49, 106, 205, 0.903);
+    border-radius: 10px;
+
+}
+
+#buscar {
+    width: 180px;
+    background-color: rgb(20, 154, 237);
+    border-radius: 20px;
+    border: none;
+    height: 30px;
+    color: white;
+}
+
+#buscar:hover {
+    background-color: rgb(20, 74, 237);
+
+}
+
+
